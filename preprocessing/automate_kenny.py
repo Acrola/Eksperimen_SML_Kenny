@@ -155,7 +155,7 @@ if __name__ == "__main__":
     raw_data_path = 'diabetes_raw.csv' # Replace with your actual raw data file name
 
     # Define the path where you want to save the processed data
-    processed_data_path = 'diabetes_preprocessing.csv' # Replace with your desired output file name
+    processed_data_path = 'preprocessing/diabetes_preprocessing.csv' # Replace with your desired output file name
 
     try:
         # Load the raw data
@@ -172,9 +172,13 @@ if __name__ == "__main__":
         print("Processed data head:")
         print(processed_df.head())
 
+        # Ensure the preprocessing directory exists before saving
+        os.makedirs(os.path.dirname(processed_data_path), exist_ok=True)
+
         # Save the processed data
         processed_df.to_csv(processed_data_path, index=False)
         print(f"\nProcessed data saved to {processed_data_path}")
+        
 
     except FileNotFoundError:
         print(f"Error: Raw data file not found at {raw_data_path}")
