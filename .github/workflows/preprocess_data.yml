@@ -27,12 +27,12 @@ jobs:
 
     - name: Run preprocessing script
       run: |
-        python preprocess.py
+        python preprocessing/automate_kenny.py
 
     - name: Commit processed data
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add processed_data.csv
+        git add preprocessing/diabetes_preprocessing.csv
         git commit -m "Add processed data"
         git push
