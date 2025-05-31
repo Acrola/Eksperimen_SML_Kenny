@@ -152,10 +152,10 @@ def preprocess_survey_data(df):
 if __name__ == "__main__":
     # Define the path to your raw data file
     # You might need to adjust this path based on where you store your raw data in the repository
-    raw_data_path = 'raw_survey_data.csv' # Replace with your actual raw data file name
+    raw_data_path = 'diabetes_binary_5050split_health_indicators_BRFSS2015.csv' # Replace with your actual raw data file name
 
     # Define the path where you want to save the processed data
-    processed_data_path = 'processed_survey_data.csv' # Replace with your desired output file name
+    processed_data_path = 'cleaned_dataset.csv' # Replace with your desired output file name
 
     try:
         # Load the raw data
