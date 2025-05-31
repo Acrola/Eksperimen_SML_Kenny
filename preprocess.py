@@ -155,7 +155,7 @@ if __name__ == "__main__":
     raw_data_path = 'diabetes_binary_5050split_health_indicators_BRFSS2015.csv' # Replace with your actual raw data file name
 
     # Define the path where you want to save the processed data
-    processed_data_path = 'cleaned_dataset.csv' # Replace with your desired output file name
+    processed_data_path = 'processed_data.csv' # Replace with your desired output file name
 
     try:
         # Load the raw data
